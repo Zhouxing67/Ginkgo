@@ -1,0 +1,16 @@
+/* ==================== Print: 打印样式 ==================== */
+
+@media print {
+    .typora-export * {
+        -webkit-print-color-adjust: exact;
+    }
+
+    @page {
+        margin-top: 20mm;
+        margin-bottom: 20mm;
+    }
+
+    #write {
+        max-width: 100%;
+    }
+}

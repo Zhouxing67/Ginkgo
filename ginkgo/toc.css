@@ -1,0 +1,80 @@
+/* ==================== TOC: 目录样式 ==================== */
+
+.md-toc {
+    background-color: #f8f9fa !important;
+    padding: 15px 20px !important;
+    border-radius: 16px !important;
+    border: 2px solid var(--accent-red) !important;
+    max-width: 100% !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15) !important;
+}
+
+.md-toc:before {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    content: "📖 目录";
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--h1-color);
+    letter-spacing: 4px;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.md-toc-content li {
+    line-height: 1.8 !important;
+    margin: 6px 0 !important;
+    list-style: none !important;
+}
+
+.md-toc-content > li > a {
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    color: #2d3748 !important;
+    text-decoration: none !important;
+    padding-left: 0 !important;
+}
+
+.md-toc-content > li > ul > li > a {
+    font-size: 20px !important;
+    color: #4a5568 !important;
+    text-decoration: none !important;
+    padding-left: 15px !important;
+}
+
+.md-toc-content > li > ul > li > ul > li > a {
+    font-size: 18px !important;
+    color: #718096 !important;
+    text-decoration: none !important;
+    padding-left: 30px !important;
+}
+
+.md-toc-content li ul li ul li ul li a {
+    font-size: 16px !important;
+    color: #a0aec0 !important;
+    text-decoration: none !important;
+    padding-left: 45px !important;
+}
+
+.md-toc-content a:hover {
+    color: var(--accent-red) !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px !important;
+}
+
+.md-toc-content a.md-toc-active {
+    color: var(--accent-red) !important;
+    font-weight: 700 !important;
+    background-color: #fde8e8 !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+}
+
+.md-toc-content ul {
+    margin: 0 !important;
+    padding: 0 !important;
+}

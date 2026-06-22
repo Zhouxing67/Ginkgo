@@ -1,0 +1,196 @@
+/* ==================== Code: 行内代码、代码块、语法高亮 ==================== */
+
+/* ── 行内代码 ── */
+#write p code {
+    padding: 3px 3px 1px;
+    color: var(--code-text-color);
+    background: var(--code-bg-color);
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    letter-spacing: 0.5px;
+}
+
+#write li code {
+    color: var(--code-text-color);
+}
+
+/* ── 代码块语言标签 ── */
+.md-fences:not([lang="mermaid"])::before {
+    content: attr(lang);
+    font-family: var(--font-main);
+    text-align: center;
+    padding-right: 15px;
+    color: var(--md-char-color);
+    display: block;
+    height: 30px;
+    width: 100%;
+    background-size: 40px;
+    border-radius: 20px;
+    background: var(--code-bg-color);
+}
+
+/* ── CodeMirror 编辑器 ── */
+.CodeMirror-wrap .CodeMirror-scroll {
+    overflow-x: auto;
+}
+
+.md-fences .cm-s-inner.CodeMirror {
+    margin-top: -0.5rem;
+}
+
+.cm-s-inner.CodeMirror {
+    padding: 1.2rem 0.8rem;
+    color: var(--code-text-color);
+    font-family: var(--font-mono);
+    border-radius: 10px;
+    background-color: var(--code-bg-color);
+    line-height: 1.6rem;
+}
+
+.CodeMirror-gutters {
+    border-right: 1px solid rgba(184, 180, 172, 0.3);
+    background: inherit;
+    white-space: nowrap;
+}
+
+pre.CodeMirror-line {
+    padding: 0 1.2rem;
+}
+
+.CodeMirror-linenumber {
+    padding: 0 3px 0 5px;
+    text-align: right;
+    color: var(--md-char-color);
+}
+
+.cm-s-inner.CodeMirror {
+    background: var(--code-bg-color);
+    border-radius: 0 0 5px 5px;
+    padding: 20px 10px;
+    page-break-before: auto;
+    line-height: 1.8rem;
+}
+
+/* ── Solarized Dark 语法高亮（完整保留） ── */
+.cm-keyword {
+    color: #D33682 !important;
+    font-weight: 700 !important;
+}
+
+.cm-variable {
+    color: #586E75 !important;
+}
+
+.cm-type {
+    color: #2AA198 !important;
+}
+
+.cm-type.cm-class {
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+    text-decoration-color: #2AA198 !important;
+}
+
+.cm-type.cm-interface,
+.cm-type.cm-enum {
+    font-weight: normal !important;
+    text-decoration: none !important;
+}
+
+.cm-variable-2,
+.cm-variable-3 {
+    color: #839496 !important;
+}
+
+.cm-property.cm-static {
+    color: #859900 !important;
+    font-style: italic !important;
+}
+
+.cm-property {
+    color: #859900 !important;
+}
+
+.cm-comment,
+.md-comment {
+    color: #93A1A1 !important;
+    font-style: italic !important;
+}
+
+.cm-string {
+    color: #DC322F !important;
+    font-variant-ligatures: common-ligatures !important;
+}
+
+.cm-string-escape.cm-valid {
+    color: #6C71C4 !important;
+}
+
+.cm-string-escape.cm-invalid {
+    color: #859900 !important;
+    text-decoration: underline !important;
+    text-decoration-color: #859900 !important;
+}
+
+.cm-number {
+    color: #6C71C4 !important;
+}
+
+.cm-constant {
+    color: #859900 !important;
+    font-style: italic !important;
+}
+
+.cm-operator,
+.cm-bracket,
+.cm-semicolon,
+.cm-comma,
+.cm-dot,
+.cm-parenths,
+.cm-braces {
+    color: #586E75 !important;
+}
+
+.cm-def.cm-static {
+    color: #CB4B16 !important;
+    font-style: italic !important;
+}
+
+.cm-def {
+    color: #859900 !important;
+}
+
+.cm-meta,
+.md-meta {
+    color: #CB4B16 !important;
+    font-style: italic !important;
+}
+
+.cm-tag {
+    color: #586E75 !important;
+}
+
+.cm-tag:not(.cm-bracket) {
+    font-weight: normal !important;
+}
+
+.cm-builtin {
+    color: #2AA198 !important;
+}
+
+.cm-attribute {
+    color: #839496 !important;
+}
+
+.cm-comment.cm-doc-tag,
+.cm-comment.cm-doc-markup {
+    color: #CB4B16 !important;
+    font-style: italic !important;
+}
+
+.cm-deprecated,
+.cm-bad-character {
+    color: #859900 !important;
+    text-decoration: underline !important;
+    text-decoration-color: #859900 !important;
+}

@@ -1,0 +1,79 @@
+/* ==================== Outline: 侧边大纲层级 ==================== */
+/* 纯视觉层次，不使用序号 */
+
+/* ── 基础 ── */
+.outline-item {
+    font-family: var(--font-main);
+    padding: 2px 0;
+    transition: all 0.15s ease;
+}
+
+/* ── H1：最大最粗最深，左侧色条 ── */
+.outline-h1 > .outline-item {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--h1-color);
+    padding-left: 0.6rem;
+    border-left: 3px solid var(--h1-color);
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
+/* ── H2：蓝色，缩进 + 左侧蓝条 ── */
+.outline-h2 > .outline-item {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--h2-color);
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--h2-color);
+    margin-bottom: 1px;
+}
+
+/* ── H3：红色，进一步缩进 + 左侧红条 ── */
+.outline-h3 > .outline-item {
+    font-size: 0.83rem;
+    font-weight: 500;
+    color: var(--h3-color);
+    padding-left: 2.6rem;
+    border-left: 2px solid var(--h3-color);
+}
+
+/* ── H4：石板蓝灰，缩进 + 细色条 ── */
+.outline-h4 > .outline-item {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--h4-color);
+    padding-left: 3.6rem;
+    border-left: 1px solid var(--h4-color);
+}
+
+/* ── H5：暗苔绿，缩进，无色条 ── */
+.outline-h5 > .outline-item {
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: var(--h5-color);
+    padding-left: 4.6rem;
+}
+
+/* ── H6：最浅最小，最深缩进 ── */
+.outline-h6 > .outline-item {
+    font-size: 0.76rem;
+    font-weight: 300;
+    color: var(--h6-color);
+    padding-left: 5.6rem;
+}
+
+/* ── 悬浮高亮 ── */
+.outline-item:hover {
+    opacity: 0.85;
+}
+
+/* ── 清除 Typora 默认的大纲伪元素 ── */
+.outline-h1 > .outline-item > .outline-label:before,
+.outline-h2 > .outline-item > .outline-label:before,
+.outline-h3 > .outline-item > .outline-label:before,
+.outline-h4 > .outline-item > .outline-label:before,
+.outline-h5 > .outline-item > .outline-label:before,
+.outline-h6 > .outline-item > .outline-label:before {
+    content: none !important;
+}

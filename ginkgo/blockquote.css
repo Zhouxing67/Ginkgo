@@ -1,0 +1,20 @@
+/* ==================== Blockquote: 引用块 ==================== */
+
+#write blockquote {
+    margin: 1.5rem 0 !important;
+    padding: 1rem 1.2rem !important;
+    background: var(--blockquote-bg-color) !important;
+    border-radius: 10px !important;
+    font-style: italic !important;
+}
+
+/* 二级引用 */
+#write blockquote blockquote {
+    background: rgba(238, 244, 239, 0.6) !important;
+    margin: 0.8rem 0 !important;
+}
+
+/* 三级引用 */
+#write blockquote blockquote blockquote {
+    background: rgba(238, 244, 239, 0.4) !important;
+}

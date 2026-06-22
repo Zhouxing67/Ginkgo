@@ -1,0 +1,26 @@
+/* ==================== Layout: 编辑区、图片等布局样式 ==================== */
+
+/* ── 编辑区 ── */
+#write {
+    max-width: var(--write-width);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: var(--font-main);
+    text-align: justify;
+}
+
+/* ── 图片 ── */
+img {
+    display: block;
+    margin: auto;
+    max-width: 95%;
+}
+
+figure {
+    text-align: center;
+}
+
+figure figcaption {
+    font-size: 0.9rem;
+    color: #555;
+}

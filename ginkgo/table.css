@@ -1,0 +1,26 @@
+/* ==================== Table: 表格样式 ==================== */
+
+#write table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    margin: 2rem 0 !important;
+    overflow: hidden !important;
+}
+
+#write th {
+    background: var(--th-bg-color) !important;
+    padding: 0.9rem 1rem !important;
+    font-weight: 700 !important;
+    color: var(--h2-color) !important;
+    border: 1px solid var(--table-border-color) !important;
+}
+
+#write td {
+    padding: 0.8rem 1rem !important;
+    border: 1px solid var(--table-border-color) !important;
+    color: var(--text-color) !important;
+}
+
+#write tr:hover {
+    background: rgba(238, 244, 239, 0.5) !important;
+}

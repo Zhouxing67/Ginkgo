@@ -1,0 +1,83 @@
+/* ==================== List: 有序/无序列表 + Vintage 红色标记 ==================== */
+
+/* ── 无序列表：三级不同符号 ── */
+#write ul {
+    margin: 1rem 0 1rem 1.6rem !important;
+    list-style-type: disc !important;
+    padding-left: 0 !important;
+}
+
+#write ul li {
+    margin: 0.5rem 0 !important;
+    line-height: 1.7 !important;
+}
+
+#write ul ul {
+    list-style-type: circle !important;
+    margin-left: 1.2rem !important;
+    padding-left: 0 !important;
+}
+
+#write ul ul ul {
+    list-style-type: square !important;
+    margin-left: 1.2rem !important;
+    padding-left: 0 !important;
+}
+
+/* ── 有序列表 ── */
+#write ol {
+    margin: 1rem 0 1rem 1.6rem !important;
+    list-style-type: decimal !important;
+    padding-left: 0 !important;
+}
+
+#write ol li {
+    margin: 0.5rem 0 !important;
+    line-height: 1.7 !important;
+}
+
+#write ol ol {
+    margin-left: 1.2rem !important;
+    padding-left: 0 !important;
+}
+
+/* ── Vintage 红色标记 ── */
+ul li::marker {
+    color: var(--accent-red);
+}
+
+ol li::marker {
+    color: var(--accent-red);
+}
+
+/* ── 列表竖线引导（学术简约，中性灰色层级） ── */
+#write li {
+    position: relative !important;
+}
+
+#write li:before {
+    content: "" !important;
+    height: calc(100% - 40px) !important;
+    top: 35px !important;
+    position: absolute !important;
+    border-left: 1.5px solid #B0B0B0;
+    left: -15.5px !important;
+}
+
+/* 一级竖线 — 深灰 */
+#write ul > li:before,
+#write ol > li:before {
+    border-left: 1.5px solid var(--h2-color) !important;
+}
+
+/* 二级竖线 — 中灰 */
+#write ul ul > li:before,
+#write ol ol > li:before {
+    border-left: 1px solid #909090 !important;
+}
+
+/* 三级竖线 — 浅灰 */
+#write ul ul ul > li:before,
+#write ol ol ol > li:before {
+    border-left: 0.5px solid #B0B0B0 !important;
+}

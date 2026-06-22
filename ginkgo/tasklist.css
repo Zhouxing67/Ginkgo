@@ -1,0 +1,73 @@
+/* ==================== Tasklist: 任务列表（红色选中态） ==================== */
+
+#write .md-task-list-item {
+    list-style: none !important;
+    position: relative !important;
+    padding-left: 2rem !important;
+}
+
+/* ── 复选框核心 ── */
+#write .md-task-list-item > input {
+    -webkit-appearance: initial !important;
+    appearance: initial !important;
+    position: absolute !important;
+    display: block !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: none !important;
+    top: 3px !important;
+    left: 4px !important;
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+    transform: translateY(-5px) !important;
+}
+
+/* ── 圆形外观 ── */
+#write .md-task-list-item > input:before {
+    content: ' ' !important;
+    display: block !important;
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+    border-radius: 50% !important;
+    border: 2px solid #8F9FA8 !important;
+    background: transparent !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+/* ── 选中态：红色填充 ── */
+#write .md-task-list-item > input:checked:before {
+    background: var(--accent-red) !important;
+    border-color: var(--accent-red) !important;
+}
+
+/* ── 勾号 ── */
+#write .md-task-list-item > input:checked:after {
+    content: '✓' !important;
+    display: block !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    color: white !important;
+    font-size: 1.3rem !important;
+    font-weight: bold !important;
+}
+
+/* ── 删除线动画 ── */
+#write .md-task-list-item > input:checked + p {
+    color: #999 !important;
+    text-decoration: line-through !important;
+    text-decoration-thickness: 2px !important;
+    transition: all 0.3s ease !important;
+}
+
+#write .md-task-list-item p {
+    margin: 0 !important;
+    line-height: 1.7 !important;
+}
+
+/* 竖线位置调整 */
+#write li.md-task-list-item:before {
+    left: -6.5px !important;
+}
