@@ -1,0 +1,6 @@
+/* ==================== Sidebar: 侧边栏文件树精简 ==================== */
+
+/* ── 隐藏文件树中的原文预览，减少拥挤 ── */
+.file-tree-node .file-node-preview {
+    display: none !important;
+}

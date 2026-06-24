@@ -1,4 +1,5 @@
-/* ==================== Tasklist: 任务列表（红色选中态） ==================== */
+/* ==================== Tasklist: 任务列表（学术简约风格） ==================== */
+/* 方形复选框 + 红色勾号，摒弃圆形纯色填充 */
 
 #write .md-task-list-item {
     list-style: none !important;
@@ -16,42 +17,50 @@
     box-shadow: none !important;
     border: none !important;
     background: none !important;
-    top: 3px !important;
+    top: 4px !important;
     left: 4px !important;
-    width: 1.25rem !important;
-    height: 1.25rem !important;
-    transform: translateY(-5px) !important;
-}
-
-/* ── 圆形外观 ── */
-#write .md-task-list-item > input:before {
-    content: ' ' !important;
-    display: block !important;
     width: 1.2rem !important;
     height: 1.2rem !important;
-    border-radius: 50% !important;
-    border: 2px solid #8F9FA8 !important;
-    background: transparent !important;
-    transition: all 0.2s ease-in-out !important;
+    margin: 0 !important;
+    cursor: pointer !important;
 }
 
-/* ── 选中态：红色填充 ── */
-#write .md-task-list-item > input:checked:before {
-    background: var(--accent-red) !important;
+/* ── 方形外观（学术克制风格） ── */
+#write .md-task-list-item > input:before {
+    content: '' !important;
+    display: block !important;
+    width: 1.15rem !important;
+    height: 1.15rem !important;
+    border-radius: 3px !important;
+    border: 2px solid #B8B4AC !important;
+    background: transparent !important;
+    transition: all 0.2s ease-in-out !important;
+    box-sizing: border-box !important;
+}
+
+/* ── 悬停：边框微红提示 ── */
+#write .md-task-list-item > input:hover:before {
     border-color: var(--accent-red) !important;
 }
 
-/* ── 勾号 ── */
+/* ── 选中态：红色边框 + 极淡底色 + 红色勾号 ── */
+#write .md-task-list-item > input:checked:before {
+    border-color: var(--accent-red) !important;
+    background: rgba(205, 24, 24, 0.06) !important;
+}
+
+/* ── 红色勾号 ── */
 #write .md-task-list-item > input:checked:after {
     content: '✓' !important;
     display: block !important;
     position: absolute !important;
     top: 50% !important;
     left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    color: white !important;
-    font-size: 1.3rem !important;
-    font-weight: bold !important;
+    transform: translate(-50%, -52%) !important;
+    color: var(--accent-red) !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
 }
 
 /* ── 删除线动画 ── */
