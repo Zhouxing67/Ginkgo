@@ -2,8 +2,8 @@
 /* 覆盖 code.css 中 .md-meta 的橙棕斜体，赋予学术简约风格 */
 
 /* ── 元数据容器（卡片样式） ── */
-.md-meta-block {
-    font-family: var(--font-main) !important;
+#write pre.md-meta-block {
+    font-family: var(--font-main) !important;   /* 用正文字体而非等宽 */
     font-style: normal !important;              /* 覆盖 code.css 的斜体 */
     color: var(--text-color) !important;        /* 覆盖 code.css 的橙棕色 */
     background: #f8f9fa !important;
