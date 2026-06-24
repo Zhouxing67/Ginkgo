@@ -72,8 +72,10 @@
     --font-main: "Times New Roman", "LXGW WenKai", "霞鹜文楷", "Noto Serif CJK SC", "Songti SC", "STSong", 'PuHuiTi', serif;
     --font-mono: Consolas, "LXGW WenKai Mono", "霞鹜文楷等宽", 'JetBrains Mono NL', monospace;
 
-    /* ── 布局系统 ── */
-    --write-width: 860px;
+    /* ── 布局系统 ──
+        流体宽度：小屏下限 680px，大屏上限 960px
+        中间段随视口缩放（78vw），充分利用屏幕空间 */
+    --write-width: clamp(680px, 78vw, 960px);
     --line-height: 1.8;
     --font-size-base: 16px;
     --h1-size: 1.8rem;
