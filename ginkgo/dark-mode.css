@@ -170,6 +170,19 @@ body {
     background: #444240 !important;
 }
 
+/* ── 滚动条 ── */
+::-webkit-scrollbar-thumb {
+    background: #504C48 !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6A6662 !important;
+}
+
+.CodeMirror-scroll::-webkit-scrollbar-thumb {
+    background: #504C48 !important;
+}
+
 /* ── 编辑器 UI ── */
 .typora-sourceview-on #toggle-sourceview-btn {
     background: var(--item-hover-bg-color) !important;
