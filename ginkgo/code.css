@@ -14,19 +14,32 @@
     color: var(--code-text-color);
 }
 
-/* ── 代码块语言标签 ── */
+/* ── 代码块容器 ── */
+.md-fences {
+    border: 1px solid #E2DFD8 !important;
+    border-radius: 8px !important;
+    margin: 1.5rem 0 !important;
+    background: var(--code-bg-color) !important;
+    position: relative !important;
+}
+
+/* ── 语言标签（右上角精致小徽章） ── */
 .md-fences:not([lang="mermaid"])::before {
     content: attr(lang);
-    font-family: var(--font-main);
-    text-align: center;
-    padding-right: 15px;
-    color: var(--md-char-color);
-    display: block;
-    height: 30px;
-    width: 100%;
-    background-size: 40px;
-    border-radius: 20px;
-    background: var(--code-bg-color);
+    position: absolute !important;
+    top: 6px !important;
+    right: 10px !important;
+    font-family: var(--font-mono);
+    font-size: 0.7rem !important;
+    color: var(--md-char-color) !important;
+    padding: 1px 8px !important;
+    border-radius: 4px !important;
+    background: rgba(0, 0, 0, 0.04) !important;
+    z-index: 10 !important;
+    height: auto !important;
+    width: auto !important;
+    display: inline !important;
+    text-align: inherit !important;
 }
 
 /* ── CodeMirror 编辑器 ── */
@@ -34,41 +47,31 @@
     overflow-x: auto;
 }
 
-.md-fences .cm-s-inner.CodeMirror {
-    margin-top: -0.5rem;
-}
-
 .cm-s-inner.CodeMirror {
-    padding: 1.2rem 0.8rem;
+    padding: 1.5rem 1rem !important;
     color: var(--code-text-color);
     font-family: var(--font-mono);
-    border-radius: 10px;
+    border-radius: 8px;
     background-color: var(--code-bg-color);
-    line-height: 1.6rem;
+    line-height: 1.8rem;
 }
 
+/* ── 行号区 ── */
 .CodeMirror-gutters {
-    border-right: 1px solid rgba(184, 180, 172, 0.3);
-    background: inherit;
-    white-space: nowrap;
+    border-right: 1px solid rgba(184, 180, 172, 0.25) !important;
+    background: transparent !important;
+}
+
+.CodeMirror-linenumber {
+    padding: 0 6px 0 8px !important;
+    text-align: right !important;
+    color: var(--md-char-color) !important;
+    font-size: 0.82rem !important;
+    opacity: 0.6 !important;
 }
 
 pre.CodeMirror-line {
     padding: 0 1.2rem;
-}
-
-.CodeMirror-linenumber {
-    padding: 0 3px 0 5px;
-    text-align: right;
-    color: var(--md-char-color);
-}
-
-.cm-s-inner.CodeMirror {
-    background: var(--code-bg-color);
-    border-radius: 0 0 5px 5px;
-    padding: 20px 10px;
-    page-break-before: auto;
-    line-height: 1.8rem;
 }
 
 /* ── Solarized Dark 语法高亮（完整保留） ── */
