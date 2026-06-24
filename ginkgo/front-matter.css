@@ -1,8 +1,8 @@
 /* ==================== YAML Front Matter: 元数据卡片 ==================== */
 /* 覆盖 code.css 中 .md-meta 的橙棕斜体，赋予学术简约风格 */
 
-/* ── 元数据容器 ── */
-.md-front-matter {
+/* ── 元数据容器（卡片样式） ── */
+.md-meta-block {
     font-family: var(--font-main) !important;
     font-style: normal !important;              /* 覆盖 code.css 的斜体 */
     color: var(--text-color) !important;        /* 覆盖 code.css 的橙棕色 */
@@ -13,27 +13,4 @@
     margin: 0 0 1.5rem 0 !important;
     font-size: 0.88rem !important;
     line-height: 1.7 !important;
-}
-
-/* ── YAML 键名 ── */
-.md-front-matter .cm-keyword {
-    color: var(--h2-color) !important;          /* Vintage 蓝 */
-    font-weight: 600 !important;
-    font-style: normal !important;              /* 覆盖 code.css */
-}
-
-/* ── YAML 值 ── */
-.md-front-matter .cm-string,
-.md-front-matter .cm-number,
-.md-front-matter .cm-variable {
-    color: var(--text-color) !important;
-    font-style: normal !important;
-}
-
-/* ── 分隔线 (---) ── */
-.md-front-matter .cm-meta,
-.md-front-matter .cm-def {
-    color: var(--md-char-color) !important;     /* 柔和灰色 */
-    font-style: normal !important;
-    font-weight: 400 !important;
 }
