@@ -1,6 +1,57 @@
-/* ==================== Sidebar: 侧边栏文件树精简 ==================== */
+/* ==================== Sidebar: 侧边栏文件树 ==================== */
 
 /* ── 隐藏文件树中的原文预览，减少拥挤 ── */
 .file-list-item-summary {
     display: none !important;
+}
+
+/* ── 文件树图标美化 ── */
+
+/* 文件夹图标：轮廓版 (fa-folder-o) + 主题蓝色，轻盈学术 */
+.file-tree-node[data-is-directory="true"] > .file-node-content > .file-node-icon.fa-folder:before {
+    content: "\f114" !important;            /* fa-folder-o 轮廓文件夹 */
+    color: var(--h2-color) !important;       /* Vintage 蓝 #285e8e */
+    font-size: 1.05rem !important;
+}
+
+/* 文件图标：保持轮廓风格，柔和灰色 */
+.file-library-file-node > .file-node-content > .file-node-icon.fa-file-text-o:before {
+    color: var(--h5-color) !important;       /* 暗苔绿 #6B7B6B */
+    font-size: 0.95rem !important;
+}
+
+/* 当前激活文件：红色高亮 */
+.file-library-file-node.active > .file-node-content > .file-node-icon.fa-file-text-o:before {
+    color: var(--accent-red) !important;     /* 主题红色 #cd1818 */
+}
+
+/* 展开/折叠箭头：更小、更柔和 */
+.file-node-open-state .fa-caret-right:before,
+.file-node-open-state .fa-caret-down:before {
+    color: var(--h4-color) !important;       /* 石板蓝灰 #5A6B7C */
+    font-size: 0.8rem !important;
+    opacity: 0.7 !important;
+}
+
+/* 箭头悬浮效果 */
+.file-tree-node:hover .file-node-open-state .fa-caret-right:before,
+.file-tree-node:hover .file-node-open-state .fa-caret-down:before {
+    opacity: 1 !important;
+}
+
+/* ── 文件节点背景高亮 ── */
+
+/* 当前激活文件：极淡红色背景 */
+.file-library-file-node.active > .file-node-background {
+    background-color: rgba(205, 24, 24, 0.06) !important;
+}
+
+/* 悬浮高亮：极淡灰色 */
+.file-tree-node:hover > .file-node-background {
+    background-color: rgba(0, 0, 0, 0.03) !important;
+}
+
+/* 激活 + 悬浮 */
+.file-library-file-node.active:hover > .file-node-background {
+    background-color: rgba(205, 24, 24, 0.1) !important;
 }
