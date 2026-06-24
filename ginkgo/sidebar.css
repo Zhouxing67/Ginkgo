@@ -1,19 +1,6 @@
 /* ==================== Sidebar: 侧边栏文件树精简 ==================== */
 
 /* ── 隐藏文件树中的原文预览，减少拥挤 ── */
-
-/* 方案1：精确类名匹配 */
-.file-tree-node .file-node-preview,
-.file-node-preview {
-    display: none !important;
-}
-
-/* 方案2：复合/变体类名匹配 */
-[class*="file-node-preview"] {
-    display: none !important;
-}
-
-/* 方案3：根据 DOM 结构（XPath 指向 div[4]）—— 隐藏第4个子元素 */
-.file-node-content > :nth-child(4) {
+.file-list-item-summary {
     display: none !important;
 }
