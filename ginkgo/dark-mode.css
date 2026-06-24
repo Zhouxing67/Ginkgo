@@ -1,209 +1,209 @@
-/* ==================== Dark Mode: 暗色模式 ==================== */
-/* 使用 prefers-color-scheme 媒体查询，跟随系统暗色主题切换 */
-/* 学术暗色：非纯黑底，暖灰调，保护视力 */
+/* ==================== Dark Mode: 暗色覆盖 ==================== */
+/* 通过 ginkgo-dark.css 加载，用户可在 Typora 偏好设置中 */
+/* 分别为亮色/暗色模式指定不同主题，互不干扰。 */
+/* 学术暗色：暖棕底 + 暖白字，仿若古书卷在昏黄灯光下 */
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        /* ── 基础色 ── */
-        --bg-color: #2B2B2B;
-        --text-color: #C8C4B8;
+/* ── 颜色变量覆盖 ── */
+:root {
+    --bg-color: #2C2825;
+    --text-color: #D4CFC4;
 
-        /* ── 标题：暗色下降低对比度，柔和过渡 ── */
-        --h1-color: #D0D0D0;
-        --h2-color: #5A9EC2;
-        --h3-color: #E06060;
-        --h4-color: #8899AA;
-        --h5-color: #8A9A8A;
-        --h6-color: #7A847A;
+    --h1-color: #E0DDD0;
+    --h2-color: #6AAED6;
+    --h3-color: #D46A6A;
+    --h4-color: #8A9BB0;
+    --h5-color: #8A9A8A;
+    --h6-color: #7A847A;
 
-        /* ── 链接 ── */
-        --link-color: #D48888;
-        --link-hover-color: #E8A0A0;
+    --link-color: #D48888;
+    --link-hover-color: #E8A0A0;
 
-        /* ── 代码 ── */
-        --code-bg-color: #363636;
-        --code-text-color: #C8C4B8;
+    --code-bg-color: #363230;
+    --code-text-color: #D4CFC4;
 
-        /* ── 引用 ── */
-        --blockquote-bg-color: #2A3530;
+    --blockquote-bg-color: #2D3530;
 
-        /* ── 表格 ── */
-        --table-border-color: #444444;
-        --th-bg-color: #333333;
+    --table-border-color: #444;
+    --th-bg-color: #34302E;
 
-        /* ── 杂项 ── */
-        --md-char-color: #666666;
-        --accent-red: #E06060;
-    }
+    --md-char-color: #706C66;
+    --accent-red: #D46A6A;
+}
 
-    /* ── Typora 内部 UI 变量 ── */
-    :root {
-        --side-bar-bg-color: #242424;
-        --control-text-color: var(--text-color);
-        --select-text-bg-color: #3473B068;
-        --search-select-bg-color: #ffffff;
-        --search-select-text-color: var(--bg-color);
-        --item-hover-bg-color: #222222;
-        --active-file-bg-color: var(--item-hover-bg-color);
-        --active-file-border-color: var(--h2-color);
-        --rawblock-edit-panel-bd: var(--code-bg-color);
-        --blur-text-color: rgba(200, 196, 184, 0.35);
-    }
+/* ── Typora 内部 UI 变量 ── */
+:root {
+    --side-bar-bg-color: #22211F;
+    --control-text-color: var(--text-color);
+    --select-text-bg-color: #3473B068;
+    --search-select-bg-color: #ffffff;
+    --search-select-text-color: var(--bg-color);
+    --item-hover-bg-color: #1E1D1B;
+    --active-file-bg-color: var(--item-hover-bg-color);
+    --active-file-border-color: var(--h2-color);
+    --rawblock-edit-panel-bd: var(--code-bg-color);
+    --blur-text-color: rgba(212, 207, 196, 0.3);
+}
 
-    /* ── 正文区 ── */
+/* ── 正文区 ── */
+body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+#typora-container {
+    background-color: var(--bg-color) !important;
+}
+
+/* ── 侧边栏 ── */
+#typora-sidebar,
+.sidebar-content,
+.sidebar-tabs {
+    background-color: var(--side-bar-bg-color) !important;
+}
+
+.sidebar-tab.active {
+    background-color: var(--bg-color) !important;
+}
+
+.file-tree-node:hover > .file-node-background {
+    background-color: var(--item-hover-bg-color) !important;
+}
+
+.file-library-file-node.active > .file-node-background {
+    background-color: rgba(212, 106, 106, 0.12) !important;
+}
+
+/* ── 文件树图标 ── */
+.file-tree-node[data-is-directory="true"] > .file-node-content > .file-node-icon.fa-folder:before {
+    color: var(--h2-color) !important;
+}
+
+.file-library-file-node > .file-node-content > .file-node-icon.fa-file-text-o:before {
+    color: var(--h5-color) !important;
+}
+
+.file-library-file-node.active > .file-node-content > .file-node-icon.fa-file-text-o:before {
+    color: var(--accent-red) !important;
+}
+
+/* ── 大纲侧边栏 ── */
+.outline-h1 > .outline-item { color: var(--h1-color) !important; border-left-color: var(--h1-color) !important; }
+.outline-h2 > .outline-item { color: var(--h2-color) !important; border-left-color: var(--h2-color) !important; }
+.outline-h3 > .outline-item { color: var(--h3-color) !important; border-left-color: var(--h3-color) !important; }
+.outline-h4 > .outline-item { color: var(--h4-color) !important; border-left-color: var(--h4-color) !important; }
+.outline-h5 > .outline-item { color: var(--h5-color) !important; }
+.outline-h6 > .outline-item { color: var(--h6-color) !important; }
+
+/* ── 目录 TOC ── */
+.md-toc {
+    background-color: #262321 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4) !important;
+}
+
+.md-toc-content > li > a {
+    color: var(--h1-color) !important;
+}
+
+.md-toc-content > li > ul > li > a {
+    color: var(--text-color) !important;
+}
+
+.md-toc-content a:hover {
+    color: var(--accent-red) !important;
+}
+
+.md-toc-content a.md-toc-active {
+    background-color: rgba(212, 106, 106, 0.15) !important;
+    color: var(--accent-red) !important;
+}
+
+/* ── 引用 ── */
+#write blockquote {
+    background: var(--blockquote-bg-color) !important;
+}
+
+/* ── 表格 ── */
+#write th {
+    background: var(--th-bg-color) !important;
+    color: var(--h2-color) !important;
+}
+
+#write td {
+    border-color: var(--table-border-color) !important;
+}
+
+#write tr:hover {
+    background: rgba(45, 53, 48, 0.5) !important;
+}
+
+/* ── 代码块 ── */
+.cm-s-inner.CodeMirror {
+    background-color: var(--code-bg-color) !important;
+    color: var(--code-text-color) !important;
+}
+
+.md-fences:not([lang="mermaid"])::before {
+    background: var(--code-bg-color) !important;
+    color: var(--md-char-color) !important;
+}
+
+/* ── 行内代码 ── */
+#write p code {
+    background: var(--code-bg-color) !important;
+    color: var(--code-text-color) !important;
+}
+
+/* ── 列表引导线 ── */
+#write ul > li:before,
+#write ol > li:before {
+    border-left-color: var(--h4-color) !important;
+}
+
+/* ── YAML 元数据 ── */
+#write pre.md-meta-block {
+    background: #262321 !important;
+    color: var(--text-color) !important;
+}
+
+/* ── 分隔线 ── */
+#write hr {
+    background: #444240 !important;
+}
+
+/* ── 编辑器 UI ── */
+.typora-sourceview-on #toggle-sourceview-btn {
+    background: var(--item-hover-bg-color) !important;
+}
+
+.megamenu-content,
+.megamenu-menu-header,
+#megamenu-menu-sidebar,
+#top-titlebar {
+    background-color: var(--side-bar-bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+/* ── 搜索面板 ── */
+#md-searchpanel {
+    background-color: var(--side-bar-bg-color) !important;
+}
+
+#md-searchpanel input {
+    background: var(--item-hover-bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+/* ── 右键菜单 ── */
+.context-menu {
+    background-color: var(--side-bar-bg-color) !important;
+    border: 1px solid #444 !important;
+    color: var(--text-color) !important;
+}
+
+/* ── 打印（暗色模式不打印） ── */
+@media print {
     body {
-        background-color: var(--bg-color) !important;
-        color: var(--text-color) !important;
-    }
-
-    #typora-container {
-        background-color: var(--bg-color) !important;
-    }
-
-    /* ── 侧边栏 ── */
-    #typora-sidebar,
-    .sidebar-content,
-    .sidebar-tabs {
-        background-color: var(--side-bar-bg-color) !important;
-    }
-
-    .sidebar-tab.active {
-        background-color: var(--bg-color) !important;
-    }
-
-    .file-tree-node:hover > .file-node-background {
-        background-color: var(--item-hover-bg-color) !important;
-    }
-
-    .file-library-file-node.active > .file-node-background {
-        background-color: rgba(224, 96, 96, 0.12) !important;
-    }
-
-    /* ── 文件树图标 ── */
-    .file-tree-node[data-is-directory="true"] > .file-node-content > .file-node-icon.fa-folder:before {
-        color: var(--h2-color) !important;
-    }
-
-    .file-library-file-node > .file-node-content > .file-node-icon.fa-file-text-o:before {
-        color: var(--h5-color) !important;
-    }
-
-    .file-library-file-node.active > .file-node-content > .file-node-icon.fa-file-text-o:before {
-        color: var(--accent-red) !important;
-    }
-
-    /* ── 大纲侧边栏 ── */
-    .outline-h1 > .outline-item { color: var(--h1-color) !important; }
-    .outline-h2 > .outline-item { color: var(--h2-color) !important; }
-    .outline-h3 > .outline-item { color: var(--h3-color) !important; }
-    .outline-h4 > .outline-item { color: var(--h4-color) !important; }
-    .outline-h5 > .outline-item { color: var(--h5-color) !important; }
-    .outline-h6 > .outline-item { color: var(--h6-color) !important; }
-
-    /* ── 目录 TOC ── */
-    .md-toc {
-        background-color: #2A2A2A !important;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.3) !important;
-    }
-
-    .md-toc-content > li > a {
-        color: #C0C0C0 !important;
-    }
-
-    .md-toc-content > li > ul > li > a {
-        color: #A0A0A0 !important;
-    }
-
-    .md-toc-content a:hover {
-        color: var(--accent-red) !important;
-    }
-
-    .md-toc-content a.md-toc-active {
-        background-color: rgba(224, 96, 96, 0.15) !important;
-    }
-
-    /* ── 引用 ── */
-    #write blockquote {
-        background: var(--blockquote-bg-color) !important;
-    }
-
-    /* ── 表格 ── */
-    #write th {
-        background: var(--th-bg-color) !important;
-        color: var(--h2-color) !important;
-    }
-
-    #write td {
-        border-color: var(--table-border-color) !important;
-    }
-
-    #write tr:hover {
-        background: rgba(42, 53, 48, 0.5) !important;
-    }
-
-    /* ── 代码块 ── */
-    .cm-s-inner.CodeMirror {
-        background-color: var(--code-bg-color) !important;
-        color: var(--code-text-color) !important;
-    }
-
-    .md-fences:not([lang="mermaid"])::before {
-        background: var(--code-bg-color) !important;
-    }
-
-    /* ── 行内代码 ── */
-    #write p code {
-        background: var(--code-bg-color) !important;
-        color: var(--code-text-color) !important;
-    }
-
-    /* ── 列表引导线 ── */
-    #write ul > li:before,
-    #write ol > li:before {
-        border-left-color: var(--h4-color) !important;
-    }
-
-    /* ── YAML 元数据 ── */
-    #write pre.md-meta-block {
-        background: #2A2A2A !important;
-        color: var(--text-color) !important;
-    }
-
-    /* ── 分隔线 ── */
-    #write hr {
-        background: #444 !important;
-    }
-
-    /* ── 编辑器 UI ── */
-    .typora-sourceview-on #toggle-sourceview-btn {
-        background: var(--item-hover-bg-color) !important;
-    }
-
-    .megamenu-content,
-    .megamenu-menu-header,
-    #megamenu-menu-sidebar,
-    #top-titlebar {
-        background-color: var(--side-bar-bg-color) !important;
-        color: var(--text-color) !important;
-    }
-
-    /* ── 搜索面板 ── */
-    #md-searchpanel input {
-        background: var(--item-hover-bg-color) !important;
-        color: var(--text-color) !important;
-    }
-
-    /* ── 右键菜单 ── */
-    .context-menu {
-        background-color: var(--side-bar-bg-color) !important;
-        color: var(--text-color) !important;
-    }
-
-    /* ── 打印（暗色模式不打印） ── */
-    @media print {
-        body {
-            background-color: #fff !important;
-            color: #000 !important;
-        }
+        background-color: #fff !important;
+        color: #000 !important;
     }
 }

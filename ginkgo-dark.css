@@ -1,0 +1,6 @@
+/* Ginkgo Dark — Typora Theme (银杏暗色) */
+/* 学术简约风格 · 暗色模式 */
+/* 在 Typora 偏好设置中，将「暗色模式主题」设为 Ginkgo Dark 即可 */
+
+@import "./ginkgo.css";
+@import "./ginkgo/dark-mode.css";

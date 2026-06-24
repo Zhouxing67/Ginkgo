@@ -8,7 +8,7 @@
 - **模块化 CSS**：14 个组件文件，按功能拆分，易于定制
 - **中西字体**：Times New Roman + 霞鹜文楷（LXGW WenKai）
 - **内置后备字体**：霞鹜文楷 LXGW WenKai + Alibaba PuHuiTi + JetBrains Mono
-- **暗色模式**：跟随系统主题，暖灰调护眼暗色
+- **暗色模式**：独立 Ginkgo Dark 主题，暖棕底护眼配色
 - **数学公式**：行内/块级公式优化排版
 - **侧边大纲**：字号/字重/颜色/色条/缩进 5 维视觉层级
 - **语法高亮**：Solarized Dark 配色，覆盖 20+ 代码 token
@@ -17,8 +17,11 @@
 
 1. 下载本仓库的 ZIP 文件并解压（或 `git clone`）
 2. 打开 Typora → **偏好设置 → 外观 → 打开主题文件夹**
-3. 将 `ginkgo.css` 和 `ginkgo/` 文件夹（含 `fonts/` 子目录）复制到 Typora 主题目录
-4. 重启 Typora，在 **主题** 菜单中选择 **Ginkgo**
+3. 将以下文件复制到 Typora 主题目录：
+   - `ginkgo.css` 和 `ginkgo/` 文件夹（含 `fonts/` 子目录）—— 亮色主题
+   - `ginkgo-dark.css` —— 暗色主题（可选）
+4. 重启 Typora，在 **主题** 菜单中选择 **Ginkgo**（亮色）或 **Ginkgo Dark**（暗色）
+5. （可选）在 Typora → 偏好设置 → 外观中，分别为亮色和暗色模式指定不同的主题
 
 > 字体文件位于 `ginkgo/fonts/` 目录下，包含霞鹜文楷（LXGW WenKai）、阿里巴巴普惠体（Alibaba PuHuiTi）和 JetBrains Mono，确保跨平台显示一致性。
 

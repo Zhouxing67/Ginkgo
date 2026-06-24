@@ -47,10 +47,3 @@
 .md-math-block .CodeMirror-cursor {
     border-left: 1px solid var(--text-color) !important;
 }
-
-/* ── 暗色模式适配 ── */
-@media (prefers-color-scheme: dark) {
-    .md-math-block .md-rawblock-container {
-        background: var(--code-bg-color) !important;
-    }
-}
