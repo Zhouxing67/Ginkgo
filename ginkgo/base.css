@@ -1,29 +1,35 @@
 /* ==================== Base: 变量、字体、全局重置 ==================== */
 /* 融合 Vintage 的字体栈与红色元素，协调莫兰迪色系 */
-/* 保留 Alibaba PuHuiTi + JetBrains Mono @font-face 作为可靠后备 */
+/* 内置后备字体统一放在 ginkgo/fonts/ 目录下 */
 
 /* ── 注册内置字体（确保跨平台显示） ── */
 @font-face {
-    font-family: 'JetBrains Mono NL';
-    src: url('./ginkgo/JetBrainsMonoNL-Regular.ttf') format('truetype');
+    font-family: 'LXGW WenKai';
+    src: url('./ginkgo/fonts/LXGWWenKai-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
     font-family: 'JetBrains Mono NL';
-    src: url('./ginkgo/JetBrainsMono-Bold.ttf') format('truetype');
+    src: url('./ginkgo/fonts/JetBrainsMonoNL-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'JetBrains Mono NL';
+    src: url('./ginkgo/fonts/JetBrainsMono-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 @font-face {
     font-family: 'PuHuiTi';
-    src: url('./ginkgo/AlibabaPuHuiTi-3-65-Medium.ttf') format('truetype');
+    src: url('./ginkgo/fonts/AlibabaPuHuiTi-3-65-Medium.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
     font-family: 'PuHuiTi';
-    src: url('./ginkgo/AlibabaPuHuiTi-3-105-Heavy.ttf') format('truetype');
+    src: url('./ginkgo/fonts/AlibabaPuHuiTi-3-105-Heavy.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
@@ -67,7 +73,7 @@
 
     /* ── 字体系统 ──
         英文字体：Times New Roman（新时代罗马）
-        中文字体：宋体风格，学术标配
+        中文字体：霞鹜文楷（LXGW WenKai），内置后备
         后备：PuHuiTi 内置字体 */
     --font-main: "Times New Roman", "LXGW WenKai", "霞鹜文楷", "Noto Serif CJK SC", "Songti SC", "STSong", 'PuHuiTi', serif;
     --font-mono: Consolas, "LXGW WenKai Mono", "霞鹜文楷等宽", 'JetBrains Mono NL', monospace;
