@@ -78,9 +78,9 @@
     margin: 0.5rem 0;
 }
 
-/* ── 高亮（==文字==） ── */
+/* ── 高亮（==文字==）：红色标记线风格 ── */
 #write mark {
-    background: #F7F0D6 !important;           /* 柔和米黄，模拟荧光笔 */
+    background: rgba(205, 24, 24, 0.10) !important;  /* 极淡红底，模拟红笔标记 */
     color: var(--text-color) !important;
     padding: 1px 3px !important;
     border-radius: 3px !important;

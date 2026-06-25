@@ -16,25 +16,25 @@
 
 /* ── 代码块容器 ── */
 .md-fences {
-    border: 1px solid #E2DFD8 !important;
+    border: 1px solid #E6E8EA !important;
     border-radius: 8px !important;
     margin: 1.5rem 0 !important;
     background: var(--code-bg-color) !important;
     position: relative !important;
 }
 
-/* ── 语言标签（右上角精致小徽章） ── */
+/* ── 语言标签（右上角极淡标记） ── */
 .md-fences:not([lang="mermaid"])::before {
     content: attr(lang);
     position: absolute !important;
     top: 6px !important;
     right: 10px !important;
     font-family: var(--font-mono);
-    font-size: 0.7rem !important;
-    color: var(--md-char-color) !important;
+    font-size: 0.65rem !important;
+    color: #B0B8B0 !important;
     padding: 1px 8px !important;
     border-radius: 4px !important;
-    background: rgba(0, 0, 0, 0.04) !important;
+    background: rgba(0, 0, 0, 0.02) !important;
     z-index: 10 !important;
     height: auto !important;
     width: auto !important;
@@ -74,29 +74,28 @@ pre.CodeMirror-line {
     padding: 0 1.2rem;
 }
 
-/* ── Solarized Light 语法高亮（完整替换 Dark） ── */
-/* Solarized Light 色板（Ethan Schoonover）
-   背景 #FDF6E3  注释 #93A1A1  正文 #586E75
-   绿 #859900  青 #2AA198  蓝 #268BD2
-   紫 #6C71C4  橙 #CB4B16  红 #DC322F  黄 #B58900 */
+/* ── Atom One Light 语法高亮 ── */
+/* 紫 #a626a4  蓝 #4078f2  青 #0184bc
+   绿 #50a14f  棕 #986801  红 #e45649  灰 #a0a1a7
+   函数紫 #8250df（与关键字紫 #a626a4 区分） */
 
 .cm-keyword {
-    color: #859900 !important;
+    color: #a626a4 !important;
     font-weight: 700 !important;
 }
 
 .cm-variable {
-    color: #268BD2 !important;
+    color: #383A42 !important;
 }
 
 .cm-type {
-    color: #B58900 !important;
+    color: #a626a4 !important;
 }
 
 .cm-type.cm-class {
     font-weight: 700 !important;
     text-decoration: underline !important;
-    text-decoration-color: #B58900 !important;
+    text-decoration-color: #a626a4 !important;
 }
 
 .cm-type.cm-interface,
@@ -107,45 +106,45 @@ pre.CodeMirror-line {
 
 .cm-variable-2,
 .cm-variable-3 {
-    color: #586E75 !important;
+    color: #8250df !important;
 }
 
 .cm-property.cm-static {
-    color: #268BD2 !important;
+    color: #4078f2 !important;
     font-style: italic !important;
 }
 
 .cm-property {
-    color: #268BD2 !important;
+    color: #4078f2 !important;
 }
 
 .cm-comment,
 .md-comment {
-    color: #93A1A1 !important;
+    color: #a0a1a7 !important;
     font-style: italic !important;
 }
 
 .cm-string {
-    color: #2AA198 !important;
+    color: #50a14f !important;
     font-variant-ligatures: common-ligatures !important;
 }
 
 .cm-string-escape.cm-valid {
-    color: #6C71C4 !important;
+    color: #4078f2 !important;
 }
 
 .cm-string-escape.cm-invalid {
-    color: #DC322F !important;
+    color: #e45649 !important;
     text-decoration: underline !important;
-    text-decoration-color: #DC322F !important;
+    text-decoration-color: #e45649 !important;
 }
 
 .cm-number {
-    color: #6C71C4 !important;
+    color: #986801 !important;
 }
 
 .cm-constant {
-    color: #CB4B16 !important;
+    color: #986801 !important;
     font-style: italic !important;
 }
 
@@ -156,26 +155,26 @@ pre.CodeMirror-line {
 .cm-dot,
 .cm-parenths,
 .cm-braces {
-    color: #657B83 !important;
+    color: #a626a4 !important;
 }
 
 .cm-def.cm-static {
-    color: #B58900 !important;
+    color: #8250df !important;
     font-style: italic !important;
 }
 
 .cm-def {
-    color: #268BD2 !important;
+    color: #8250df !important;
 }
 
 .cm-meta,
 .md-meta {
-    color: #CB4B16 !important;
+    color: #986801 !important;
     font-style: italic !important;
 }
 
 .cm-tag {
-    color: #859900 !important;
+    color: #a626a4 !important;
 }
 
 .cm-tag:not(.cm-bracket) {
@@ -183,35 +182,35 @@ pre.CodeMirror-line {
 }
 
 .cm-builtin {
-    color: #B58900 !important;
+    color: #8250df !important;
 }
 
 .cm-attribute {
-    color: #268BD2 !important;
+    color: #50a14f !important;
 }
 
 .cm-comment.cm-doc-tag,
 .cm-comment.cm-doc-markup {
-    color: #6C71C4 !important;
+    color: #a626a4 !important;
     font-style: italic !important;
 }
 
 .cm-deprecated,
 .cm-bad-character {
-    color: #DC322F !important;
+    color: #e45649 !important;
     text-decoration: underline !important;
-    text-decoration-color: #DC322F !important;
+    text-decoration-color: #e45649 !important;
 }
 
 .cm-atom {
-    color: #6C71C4 !important;
+    color: #986801 !important;
 }
 
 .cm-qualifier {
-    color: #B58900 !important;
+    color: #4078f2 !important;
 }
 
 .cm-error {
-    color: #DC322F !important;
-    background: #FDF6E3 !important;
+    color: #e45649 !important;
+    background: transparent !important;
 }
