@@ -74,24 +74,29 @@ pre.CodeMirror-line {
     padding: 0 1.2rem;
 }
 
-/* ── Solarized Dark 语法高亮（完整保留） ── */
+/* ── Solarized Light 语法高亮（完整替换 Dark） ── */
+/* Solarized Light 色板（Ethan Schoonover）
+   背景 #FDF6E3  注释 #93A1A1  正文 #586E75
+   绿 #859900  青 #2AA198  蓝 #268BD2
+   紫 #6C71C4  橙 #CB4B16  红 #DC322F  黄 #B58900 */
+
 .cm-keyword {
-    color: #D33682 !important;
+    color: #859900 !important;
     font-weight: 700 !important;
 }
 
 .cm-variable {
-    color: #586E75 !important;
+    color: #268BD2 !important;
 }
 
 .cm-type {
-    color: #2AA198 !important;
+    color: #B58900 !important;
 }
 
 .cm-type.cm-class {
     font-weight: 700 !important;
     text-decoration: underline !important;
-    text-decoration-color: #2AA198 !important;
+    text-decoration-color: #B58900 !important;
 }
 
 .cm-type.cm-interface,
@@ -102,16 +107,16 @@ pre.CodeMirror-line {
 
 .cm-variable-2,
 .cm-variable-3 {
-    color: #839496 !important;
+    color: #586E75 !important;
 }
 
 .cm-property.cm-static {
-    color: #859900 !important;
+    color: #268BD2 !important;
     font-style: italic !important;
 }
 
 .cm-property {
-    color: #859900 !important;
+    color: #268BD2 !important;
 }
 
 .cm-comment,
@@ -121,7 +126,7 @@ pre.CodeMirror-line {
 }
 
 .cm-string {
-    color: #DC322F !important;
+    color: #2AA198 !important;
     font-variant-ligatures: common-ligatures !important;
 }
 
@@ -130,9 +135,9 @@ pre.CodeMirror-line {
 }
 
 .cm-string-escape.cm-invalid {
-    color: #859900 !important;
+    color: #DC322F !important;
     text-decoration: underline !important;
-    text-decoration-color: #859900 !important;
+    text-decoration-color: #DC322F !important;
 }
 
 .cm-number {
@@ -140,7 +145,7 @@ pre.CodeMirror-line {
 }
 
 .cm-constant {
-    color: #859900 !important;
+    color: #CB4B16 !important;
     font-style: italic !important;
 }
 
@@ -151,16 +156,16 @@ pre.CodeMirror-line {
 .cm-dot,
 .cm-parenths,
 .cm-braces {
-    color: #586E75 !important;
+    color: #657B83 !important;
 }
 
 .cm-def.cm-static {
-    color: #CB4B16 !important;
+    color: #B58900 !important;
     font-style: italic !important;
 }
 
 .cm-def {
-    color: #859900 !important;
+    color: #268BD2 !important;
 }
 
 .cm-meta,
@@ -170,7 +175,7 @@ pre.CodeMirror-line {
 }
 
 .cm-tag {
-    color: #586E75 !important;
+    color: #859900 !important;
 }
 
 .cm-tag:not(.cm-bracket) {
@@ -178,22 +183,35 @@ pre.CodeMirror-line {
 }
 
 .cm-builtin {
-    color: #2AA198 !important;
+    color: #B58900 !important;
 }
 
 .cm-attribute {
-    color: #839496 !important;
+    color: #268BD2 !important;
 }
 
 .cm-comment.cm-doc-tag,
 .cm-comment.cm-doc-markup {
-    color: #CB4B16 !important;
+    color: #6C71C4 !important;
     font-style: italic !important;
 }
 
 .cm-deprecated,
 .cm-bad-character {
-    color: #859900 !important;
+    color: #DC322F !important;
     text-decoration: underline !important;
-    text-decoration-color: #859900 !important;
+    text-decoration-color: #DC322F !important;
+}
+
+.cm-atom {
+    color: #6C71C4 !important;
+}
+
+.cm-qualifier {
+    color: #B58900 !important;
+}
+
+.cm-error {
+    color: #DC322F !important;
+    background: #FDF6E3 !important;
 }
