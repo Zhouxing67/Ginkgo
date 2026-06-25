@@ -174,6 +174,12 @@ body {
     background: #444240 !important;
 }
 
+/* ── 高亮 ── */
+#write mark {
+    background: #3D3828 !important;
+    color: #E0DCC0 !important;
+}
+
 /* ── 滚动条 ── */
 ::-webkit-scrollbar-thumb {
     background: #504C48 !important;

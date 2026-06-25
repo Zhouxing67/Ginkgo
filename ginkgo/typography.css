@@ -78,6 +78,14 @@
     margin: 0.5rem 0;
 }
 
+/* ── 高亮（==文字==） ── */
+#write mark {
+    background: #F7F0D6 !important;           /* 柔和米黄，模拟荧光笔 */
+    color: var(--text-color) !important;
+    padding: 1px 3px !important;
+    border-radius: 3px !important;
+}
+
 /* ── 分隔线 ── */
 #write hr {
     border: none !important;

@@ -1,46 +1,38 @@
 /* ==================== Math: 数学公式样式 ==================== */
-/* 兼顾行内公式与块级公式的学术排版质感 */
+/* 以清晰、透气为原则，避免过度修饰 */
 
 /* ── 行内公式 ── */
 .MathJax {
-    font-size: 105% !important;              /* 略大于正文，便于阅读上下标 */
+    font-size: 100% !important;              /* 与正文同号，自然融入 */
     color: var(--text-color) !important;
 }
 
 /* ── 块级公式 ── */
 .md-math-block {
-    margin: 1.5rem 0 !important;
+    margin: 2rem 0 !important;               /* 上下留白，透气 */
     text-align: center !important;
 }
 
 .md-math-block .MathJax {
-    font-size: 115% !important;              /* 块级公式更大，突出显示 */
+    font-size: 105% !important;              /* 仅略大一丝，不突兀 */
 }
 
-/* ── 公式编辑区 ── */
+/* ── 公式编辑区（仅编辑时可见） ── */
 .md-math-block .md-rawblock-container {
-    padding: 0.8rem !important;
-    border-radius: 8px !important;
-    background: var(--code-bg-color) !important;
+    padding: 0.6rem !important;
+    border-radius: 6px !important;
 }
 
+/* ── 公式编辑区工具栏 ── */
 .md-math-block .md-rawblock-tooltip {
     border-radius: 6px 6px 0 0 !important;
-    background: var(--code-bg-color) !important;
     color: var(--md-char-color) !important;
 }
 
-/* ── 行内公式编辑高亮 ── */
+/* ── 行内公式编辑背景（极淡色） ── */
 .md-inline-math .md-rawblock-container {
     padding: 2px 4px !important;
-    border-radius: 4px !important;
-    background: var(--code-bg-color) !important;
-}
-
-/* ── MathJax SVG 文字 ── */
-.MathJax text,
-.MathJax use {
-    font-family: "Times New Roman", "LXGW WenKai", "JetBrains Mono NL", serif !important;
+    border-radius: 3px !important;
 }
 
 /* ── 输入光标（编辑时） ── */
