@@ -36,7 +36,9 @@
     line-height: 1.7 !important;
 }
 
+/* ── 二级有序列表：罗马数字（学术传统） ── */
 #write ol ol {
+    list-style-type: lower-roman !important;
     margin-left: 1.2rem !important;
     padding-left: 0 !important;
 }
