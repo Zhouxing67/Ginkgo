@@ -57,7 +57,7 @@
     font-weight: 500;
 }
 
-/* ── 链接：砖红色系 ── */
+/* ── 链接：经典蓝 + hover 底线 ── */
 #write a {
     color: var(--link-color) !important;
     font-weight: 600 !important;
