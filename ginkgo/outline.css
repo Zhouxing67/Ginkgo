@@ -64,6 +64,15 @@
 }
 
 /* ── 悬浮高亮 ── */
+/* 大窗口下确保深层大纲不小于 14px，并避免过细字重。 */
+@media screen and (min-width: 1600px) {
+    .outline-h5 > .outline-item,
+    .outline-h6 > .outline-item {
+        font-size: max(0.78rem, 14px);
+        font-weight: 400;
+    }
+}
+
 .outline-item:hover {
     opacity: 0.85;
 }

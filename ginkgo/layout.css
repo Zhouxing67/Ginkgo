@@ -1,5 +1,14 @@
 /* ==================== Layout: 编辑区、图片等布局样式 ==================== */
 
+/* 大窗口下继续增加正文宽度；1600px 以下保留原有布局。
+   从 960px 平滑增长，最高 1440px，避免超宽屏上的行长失控。 */
+@media screen and (min-width: 1600px) {
+    :root {
+        --write-width: clamp(960px, 60vw, 1440px);
+        --font-size-base: 18px;
+    }
+}
+
 /* ── 编辑区 ── */
 #write {
     max-width: var(--write-width);
