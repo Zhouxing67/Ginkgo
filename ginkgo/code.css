@@ -31,7 +31,7 @@
     right: 10px !important;
     font-family: var(--font-mono);
     font-size: 0.65rem !important;
-    color: #B0B8B0 !important;
+    color: #626D68 !important;
     padding: 1px 8px !important;
     border-radius: 4px !important;
     background: rgba(0, 0, 0, 0.02) !important;
@@ -120,7 +120,7 @@ pre.CodeMirror-line {
 
 .cm-comment,
 .md-comment {
-    color: #a0a1a7 !important;
+    color: #626B70 !important;
     font-style: italic !important;
 }
 

@@ -5,7 +5,7 @@
 ## 特点
 
 - **学术配色**：H2 Vintage 蓝 / H3 红色点睛 / 6 级标题层级递进
-- **模块化 CSS**：12 个组件文件，按功能拆分，易于定制
+- **模块化 CSS**：15 个源文件按功能拆分；发布入口合并为单个 CSS，减少加载请求
 - **中西字体**：Times New Roman + 霞鹜文楷（LXGW WenKai）
 - **内置后备字体**：霞鹜文楷 LXGW WenKai + Alibaba PuHuiTi + JetBrains Mono
 - **数学公式**：行内/块级公式优化排版
@@ -19,6 +19,8 @@
 3. 将 `ginkgo.css` 和 `ginkgo/` 文件夹复制到 Typora 主题目录
 4. 重启 Typora，在 **主题** 菜单中选择 **Ginkgo**
 
+修改 `ginkgo/` 下的源 CSS 后，在仓库根目录运行 `./build-theme.ps1` 更新发布入口 `ginkgo.css`，再将更新后的入口文件复制到 Typora 主题目录。
+
 > 字体文件位于 `ginkgo/` 目录下，包含 Alibaba PuHuiTi 和 JetBrains Mono，确保跨平台显示一致性。
 
 ## 配色一览
@@ -31,7 +33,7 @@
 | H4 | 石板蓝灰 | `#5A6B7C` |
 | H5 | 暗苔绿 | `#6B7B6B` |
 | H6 | 暗灰绿 | `#56605C` |
-| 链接 | 砖红 | `#B85C5C` |
+| 链接 | Vintage 蓝 | `#285e8e` |
 
 ## 许可
 

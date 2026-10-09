@@ -9,7 +9,7 @@
 
 /* ── 块级公式 ── */
 .md-math-block {
-    margin: 2rem 0 !important;               /* 上下留白，透气 */
+    margin: 1.5rem 0 !important;             /* 与其他块级内容保持一致 */
     text-align: center !important;
 }
 

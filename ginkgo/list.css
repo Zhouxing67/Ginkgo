@@ -2,13 +2,13 @@
 
 /* ── 无序列表：三级不同符号 ── */
 #write ul {
-    margin: 1rem 0 1rem 1.6rem !important;
+    margin: 1.2rem 0 1.2rem 1.6rem !important;
     list-style-type: disc !important;
     padding-left: 0 !important;
 }
 
 #write ul li {
-    margin: 0.5rem 0 !important;
+    margin: 0.4rem 0 !important;
     line-height: 1.7 !important;
 }
 
@@ -26,13 +26,13 @@
 
 /* ── 有序列表 ── */
 #write ol {
-    margin: 1rem 0 1rem 1.6rem !important;
+    margin: 1.2rem 0 1.2rem 1.6rem !important;
     list-style-type: decimal !important;
     padding-left: 0 !important;
 }
 
 #write ol li {
-    margin: 0.5rem 0 !important;
+    margin: 0.4rem 0 !important;
     line-height: 1.7 !important;
 }
 
