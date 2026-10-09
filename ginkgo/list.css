@@ -52,34 +52,11 @@ ol li::marker {
     color: var(--accent-red);
 }
 
-/* ── 列表竖线引导（学术简约，中性灰色层级） ── */
-#write li {
-    position: relative !important;
-}
-
-#write li:before {
-    content: "" !important;
-    height: calc(100% - 40px) !important;
-    top: 35px !important;
-    position: absolute !important;
-    border-left: 1.5px solid #B0B0B0;
-    left: -15.5px !important;
-}
-
-/* 一级竖线 — 深灰 */
-#write ul > li:before,
-#write ol > li:before {
-    border-left: 1.5px solid var(--h2-color) !important;
-}
-
-/* 二级竖线 — 中灰 */
-#write ul ul > li:before,
-#write ol ol > li:before {
-    border-left: 1px solid #909090 !important;
-}
-
-/* 三级竖线 — 浅灰 */
-#write ul ul ul > li:before,
-#write ol ol ol > li:before {
-    border-left: 0.5px solid #B0B0B0 !important;
+/* 只给嵌套列表加引导线，避免每个短条目产生零碎线段。 */
+#write ul ul,
+#write ul ol,
+#write ol ul,
+#write ol ol {
+    border-left: 1px solid #B0B0B0;
+    padding-left: 0.8rem !important;
 }

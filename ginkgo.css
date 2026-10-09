@@ -235,27 +235,33 @@ body {
 }
 
 /* ── 图片 ── */
-img {
+#write img {
     display: block;
-    margin: auto;
-    max-width: 95%;
+    margin: 1.5rem auto;
+    max-width: 100%;
 }
 
-figure {
+#write figure {
+    margin: 1.5rem 0;
     text-align: center;
 }
 
-figure figcaption {
+#write figure img {
+    margin: 0 auto 0.5rem;
+}
+
+#write figure figcaption {
     font-size: 0.9rem;
     color: #555;
+    line-height: 1.5;
 }
 
 /* ==================== TOC: 目录样式 ==================== */
 
 .md-toc {
     background-color: #f8f9fa !important;
-    padding: 15px 20px !important;
-    border-radius: 16px !important;
+    padding: 1rem 1.25rem !important;
+    border-radius: 10px !important;
     border: 1px solid var(--accent-red) !important;
     max-width: 100% !important;
     margin: 20px 0 !important;
@@ -268,23 +274,23 @@ figure figcaption {
     width: 100%;
     text-align: center;
     content: "📖 目录";
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--h1-color);
-    letter-spacing: 4px;
-    padding-bottom: 8px;
-    margin-bottom: 10px;
+    letter-spacing: 2px;
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
     border-bottom: 1px solid #E0E0E0;
 }
 
-.md-toc-content li {
+#write .md-toc-content li {
     line-height: 1.8 !important;
-    margin: 6px 0 !important;
+    margin: 0.25rem 0 !important;
     list-style: none !important;
 }
 
 .md-toc-content > li > a {
-    font-size: 24px !important;
+    font-size: 1.1rem !important;
     font-weight: 600 !important;
     color: var(--h1-color) !important;
     text-decoration: none !important;
@@ -292,24 +298,24 @@ figure figcaption {
 }
 
 .md-toc-content > li > ul > li > a {
-    font-size: 20px !important;
+    font-size: 1rem !important;
     color: #4E5C68 !important;
     text-decoration: none !important;
-    padding-left: 15px !important;
+    padding-left: 1rem !important;
 }
 
 .md-toc-content > li > ul > li > ul > li > a {
-    font-size: 18px !important;
+    font-size: 0.95rem !important;
     color: #596774 !important;
     text-decoration: none !important;
-    padding-left: 30px !important;
+    padding-left: 2rem !important;
 }
 
 .md-toc-content li ul li ul li ul li a {
-    font-size: 16px !important;
+    font-size: 0.9rem !important;
     color: #626D76 !important;
     text-decoration: none !important;
-    padding-left: 45px !important;
+    padding-left: 3rem !important;
 }
 
 .md-toc-content a:hover {
@@ -326,9 +332,10 @@ figure figcaption {
     border-radius: 4px !important;
 }
 
-.md-toc-content ul {
+#write .md-toc-content ul {
     margin: 0 !important;
     padding: 0 !important;
+    border-left: 0 !important;
 }
 
 /* ==================== Outline: 侧边大纲层级 ==================== */
@@ -357,7 +364,7 @@ figure figcaption {
     font-size: 0.88rem;
     font-weight: 600;
     color: var(--h2-color);
-    padding-left: 1.5rem;
+    padding-left: 1.2rem;
     border-left: 2px solid var(--h2-color);
     margin-bottom: 1px;
 }
@@ -367,33 +374,33 @@ figure figcaption {
     font-size: 0.83rem;
     font-weight: 500;
     color: var(--h3-color);
-    padding-left: 2.6rem;
+    padding-left: 1.8rem;
     border-left: 2px solid var(--h3-color);
 }
 
 /* ── H4：石板蓝灰，缩进 + 细色条 ── */
 .outline-h4 > .outline-item {
-    font-size: 0.8rem;
+    font-size: 0.84rem;
     font-weight: 400;
     color: var(--h4-color);
-    padding-left: 3.6rem;
+    padding-left: 2.4rem;
     border-left: 1px solid var(--h4-color);
 }
 
 /* ── H5：暗苔绿，缩进，无色条 ── */
 .outline-h5 > .outline-item {
-    font-size: 0.78rem;
+    font-size: 0.82rem;
     font-weight: 400;
     color: var(--h5-color);
-    padding-left: 4.6rem;
+    padding-left: 3rem;
 }
 
 /* ── H6：最浅最小，最深缩进 ── */
 .outline-h6 > .outline-item {
-    font-size: 0.76rem;
-    font-weight: 300;
+    font-size: 0.8rem;
+    font-weight: 400;
     color: var(--h6-color);
-    padding-left: 5.6rem;
+    padding-left: 3.6rem;
 }
 
 /* ── 悬浮高亮 ── */
@@ -735,36 +742,13 @@ ol li::marker {
     color: var(--accent-red);
 }
 
-/* ── 列表竖线引导（学术简约，中性灰色层级） ── */
-#write li {
-    position: relative !important;
-}
-
-#write li:before {
-    content: "" !important;
-    height: calc(100% - 40px) !important;
-    top: 35px !important;
-    position: absolute !important;
-    border-left: 1.5px solid #B0B0B0;
-    left: -15.5px !important;
-}
-
-/* 一级竖线 — 深灰 */
-#write ul > li:before,
-#write ol > li:before {
-    border-left: 1.5px solid var(--h2-color) !important;
-}
-
-/* 二级竖线 — 中灰 */
-#write ul ul > li:before,
-#write ol ol > li:before {
-    border-left: 1px solid #909090 !important;
-}
-
-/* 三级竖线 — 浅灰 */
-#write ul ul ul > li:before,
-#write ol ol ol > li:before {
-    border-left: 0.5px solid #B0B0B0 !important;
+/* 只给嵌套列表加引导线，避免每个短条目产生零碎线段。 */
+#write ul ul,
+#write ul ol,
+#write ol ul,
+#write ol ol {
+    border-left: 1px solid #B0B0B0;
+    padding-left: 0.8rem !important;
 }
 
 /* ==================== Blockquote: 引用块 ==================== */
@@ -906,11 +890,6 @@ ol li::marker {
 #write .md-task-list-item p {
     margin: 0 !important;
     line-height: 1.7 !important;
-}
-
-/* 竖线位置调整 */
-#write li.md-task-list-item:before {
-    left: -6.5px !important;
 }
 
 /* ==================== Sidebar: 侧边栏文件树 ==================== */

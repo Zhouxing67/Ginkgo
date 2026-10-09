@@ -2,8 +2,8 @@
 
 .md-toc {
     background-color: #f8f9fa !important;
-    padding: 15px 20px !important;
-    border-radius: 16px !important;
+    padding: 1rem 1.25rem !important;
+    border-radius: 10px !important;
     border: 1px solid var(--accent-red) !important;
     max-width: 100% !important;
     margin: 20px 0 !important;
@@ -16,23 +16,23 @@
     width: 100%;
     text-align: center;
     content: "📖 目录";
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--h1-color);
-    letter-spacing: 4px;
-    padding-bottom: 8px;
-    margin-bottom: 10px;
+    letter-spacing: 2px;
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
     border-bottom: 1px solid #E0E0E0;
 }
 
-.md-toc-content li {
+#write .md-toc-content li {
     line-height: 1.8 !important;
-    margin: 6px 0 !important;
+    margin: 0.25rem 0 !important;
     list-style: none !important;
 }
 
 .md-toc-content > li > a {
-    font-size: 24px !important;
+    font-size: 1.1rem !important;
     font-weight: 600 !important;
     color: var(--h1-color) !important;
     text-decoration: none !important;
@@ -40,24 +40,24 @@
 }
 
 .md-toc-content > li > ul > li > a {
-    font-size: 20px !important;
+    font-size: 1rem !important;
     color: #4E5C68 !important;
     text-decoration: none !important;
-    padding-left: 15px !important;
+    padding-left: 1rem !important;
 }
 
 .md-toc-content > li > ul > li > ul > li > a {
-    font-size: 18px !important;
+    font-size: 0.95rem !important;
     color: #596774 !important;
     text-decoration: none !important;
-    padding-left: 30px !important;
+    padding-left: 2rem !important;
 }
 
 .md-toc-content li ul li ul li ul li a {
-    font-size: 16px !important;
+    font-size: 0.9rem !important;
     color: #626D76 !important;
     text-decoration: none !important;
-    padding-left: 45px !important;
+    padding-left: 3rem !important;
 }
 
 .md-toc-content a:hover {
@@ -74,7 +74,8 @@
     border-radius: 4px !important;
 }
 
-.md-toc-content ul {
+#write .md-toc-content ul {
     margin: 0 !important;
     padding: 0 !important;
+    border-left: 0 !important;
 }

@@ -24,7 +24,7 @@
     font-size: 0.88rem;
     font-weight: 600;
     color: var(--h2-color);
-    padding-left: 1.5rem;
+    padding-left: 1.2rem;
     border-left: 2px solid var(--h2-color);
     margin-bottom: 1px;
 }
@@ -34,33 +34,33 @@
     font-size: 0.83rem;
     font-weight: 500;
     color: var(--h3-color);
-    padding-left: 2.6rem;
+    padding-left: 1.8rem;
     border-left: 2px solid var(--h3-color);
 }
 
 /* ── H4：石板蓝灰，缩进 + 细色条 ── */
 .outline-h4 > .outline-item {
-    font-size: 0.8rem;
+    font-size: 0.84rem;
     font-weight: 400;
     color: var(--h4-color);
-    padding-left: 3.6rem;
+    padding-left: 2.4rem;
     border-left: 1px solid var(--h4-color);
 }
 
 /* ── H5：暗苔绿，缩进，无色条 ── */
 .outline-h5 > .outline-item {
-    font-size: 0.78rem;
+    font-size: 0.82rem;
     font-weight: 400;
     color: var(--h5-color);
-    padding-left: 4.6rem;
+    padding-left: 3rem;
 }
 
 /* ── H6：最浅最小，最深缩进 ── */
 .outline-h6 > .outline-item {
-    font-size: 0.76rem;
-    font-weight: 300;
+    font-size: 0.8rem;
+    font-weight: 400;
     color: var(--h6-color);
-    padding-left: 5.6rem;
+    padding-left: 3.6rem;
 }
 
 /* ── 悬浮高亮 ── */

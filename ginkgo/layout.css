@@ -18,17 +18,23 @@
 }
 
 /* ── 图片 ── */
-img {
+#write img {
     display: block;
-    margin: auto;
-    max-width: 95%;
+    margin: 1.5rem auto;
+    max-width: 100%;
 }
 
-figure {
+#write figure {
+    margin: 1.5rem 0;
     text-align: center;
 }
 
-figure figcaption {
+#write figure img {
+    margin: 0 auto 0.5rem;
+}
+
+#write figure figcaption {
     font-size: 0.9rem;
     color: #555;
+    line-height: 1.5;
 }
