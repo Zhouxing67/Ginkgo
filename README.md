@@ -6,22 +6,23 @@
 
 - **学术配色**：H2 Vintage 蓝 / H3 红色点睛 / 6 级标题层级递进
 - **模块化 CSS**：16 个源文件按功能拆分；发布入口合并为单个 CSS，减少加载请求
-- **中西字体**：Times New Roman + 霞鹜文楷（LXGW WenKai）
-- **内置后备字体**：霞鹜文楷 LXGW WenKai + Alibaba PuHuiTi + JetBrains Mono
+- **系统字体**：英文优先 Times New Roman，中文优先本机安装的霞鹜文楷，未安装时回退到 Noto Serif SC 等系统宋体
 - **数学公式**：行内/块级公式优化排版
 - **侧边大纲**：字号/字重/颜色/色条/缩进 5 维视觉层级
-- **语法高亮**：Solarized Light 配色，覆盖 20+ 代码 token
+- **语法高亮**：Atom One Light 配色，覆盖 20+ 代码 token
 
 ## 安装
 
 1. 下载本仓库的 ZIP 文件并解压（或 `git clone`）
 2. 打开 Typora → **偏好设置 → 外观 → 打开主题文件夹**
-3. 将 `ginkgo.css` 和 `ginkgo/` 文件夹复制到 Typora 主题目录
+3. 只将 `ginkgo.css` 复制到 Typora 主题目录
 4. 重启 Typora，在 **主题** 菜单中选择 **Ginkgo**
 
-修改 `ginkgo/` 下的源 CSS 后，在仓库根目录运行 `./build-theme.ps1` 更新发布入口 `ginkgo.css`，再将更新后的入口文件复制到 Typora 主题目录。
+## 修改主题
 
-> 字体文件位于 `ginkgo/` 目录下，包含 Alibaba PuHuiTi 和 JetBrains Mono，确保跨平台显示一致性。
+`ginkgo/*.css` 是按功能拆分的开发源文件。修改这些文件后，在仓库根目录运行 `./build-theme.ps1`，将它们合并为安装用的 `ginkgo.css`。Typora 只需要生成后的 `ginkgo.css`，不需要复制源文件。每次修改源文件后都要重新构建，并覆盖 Typora 主题目录中的 `ginkgo.css`。
+
+主题不附带字体文件，也不通过 `@font-face` 加载字体。若希望与原先的霞鹜文楷外观一致，请先在操作系统中单独安装该字体；否则会自动使用可用的系统后备字体，不同设备上的字形可能不同。
 
 ## 配色一览
 

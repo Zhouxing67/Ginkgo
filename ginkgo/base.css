@@ -1,43 +1,6 @@
 /* ==================== Base: 变量、字体、全局重置 ==================== */
 /* 融合 Vintage 的字体栈与红色元素，协调莫兰迪色系 */
-/* 内置后备字体统一放在 ginkgo/fonts/ 目录下 */
-
-/* ── 注册内置字体（确保跨平台显示） ── */
-@font-face {
-    font-family: 'LXGW WenKai';
-    src: url('./fonts/LXGWWenKai-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'JetBrains Mono NL';
-    src: url('./fonts/JetBrainsMonoNL-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'JetBrains Mono NL';
-    src: url('./fonts/JetBrainsMono-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'PuHuiTi';
-    src: url('./fonts/AlibabaPuHuiTi-3-65-Medium.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'PuHuiTi';
-    src: url('./fonts/AlibabaPuHuiTi-3-105-Heavy.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
+/* 仅使用操作系统已安装的字体，不从主题目录加载字体文件。 */
 
 :root {
     /* ── 颜色系统 ── */
@@ -78,10 +41,9 @@
 
     /* ── 字体系统 ──
         英文字体：Times New Roman（新时代罗马）
-        中文字体：霞鹜文楷（LXGW WenKai），内置后备
-        后备：PuHuiTi 内置字体 */
-    --font-main: "Times New Roman", "LXGW WenKai", "霞鹜文楷", "Noto Serif CJK SC", "Songti SC", "STSong", 'PuHuiTi', serif;
-    --font-mono: Consolas, "LXGW WenKai Mono", "霞鹜文楷等宽", 'JetBrains Mono NL', monospace;
+        中文优先使用本机霞鹜文楷；未安装时回退至系统宋体 */
+    --font-main: "Times New Roman", "LXGW WenKai", "霞鹜文楷", "Noto Serif SC", "Noto Serif CJK SC", "Songti SC", "STSong", "SimSun", serif;
+    --font-mono: Consolas, "LXGW WenKai Mono", "霞鹜文楷等宽", "JetBrains Mono", "Cascadia Code", monospace;
 
     /* ── 布局系统 ──
         正文保持适中的阅读行长；窄窗口由 max-width 自动收缩 */
