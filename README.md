@@ -5,7 +5,7 @@
 ## 特点
 
 - **学术配色**：H2 Vintage 蓝 / H3 红色点睛 / 6 级标题层级递进
-- **模块化 CSS**：15 个源文件按功能拆分；发布入口合并为单个 CSS，减少加载请求
+- **模块化 CSS**：16 个源文件按功能拆分；发布入口合并为单个 CSS，减少加载请求
 - **中西字体**：Times New Roman + 霞鹜文楷（LXGW WenKai）
 - **内置后备字体**：霞鹜文楷 LXGW WenKai + Alibaba PuHuiTi + JetBrains Mono
 - **数学公式**：行内/块级公式优化排版

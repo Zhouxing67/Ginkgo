@@ -1,0 +1,21 @@
+/* ==================== Window: 顶部文件名栏 ==================== */
+
+/* 保持 Typora 原有的 24px 高度与窗口拖动区域。 */
+#top-titlebar {
+    background-color: var(--bg-color) !important;
+    border-bottom: 1px solid #E5E8E5;
+}
+
+#top-titlebar .title-text {
+    color: var(--text-color) !important;
+    opacity: 1;
+    font-size: 12px;
+}
+
+#top-titlebar #w-menu-btn .ty-menu-btn-area > span {
+    border-top-color: var(--h2-color) !important;
+}
+
+#top-titlebar #w-menu-btn .ty-menu-btn-area:hover > span {
+    background-color: var(--h2-color) !important;
+}
